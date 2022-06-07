@@ -8,11 +8,11 @@ namespace TestProject1
     [TestFixture]
     public class Tests
     {
-        private Method _method;
+        private StudentHelper _method;
         [SetUp]
         public void Setup()
         {
-            _method = new Method();
+            _method = new StudentHelper();
         }
 
         [Test]

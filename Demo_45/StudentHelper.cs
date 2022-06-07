@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Demo_45
+﻿namespace Demo_45
 {
-    public class Method
+    public class StudentHelper
     {
         public Student GetStudent(int Id)
         {
             using (var context = new SchoolDBContext())
             {
-                Student student = context.Students.Single(p => p.StudentID == Id);
+                Student student = context.Students.SingleOrDefault(p => p.StudentID == Id);
                 return student;
             }
         }
